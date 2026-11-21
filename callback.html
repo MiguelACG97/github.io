@@ -1,0 +1,17 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Conectado - Al Rojo Vice</title><style>:root{--bg:#0b0418;--fg:#f4eefc;--mut:#b9aecb;--acc:#ffc93c;--pink:#ff4fa3}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 64px}h1{font-size:2.2rem;margin:0 0 4px;color:var(--acc);letter-spacing:.5px}
+h2{font-size:1.15rem;margin:28px 0 6px;color:var(--pink)}p,li{color:var(--fg)}.mut{color:var(--mut)}a{color:var(--acc)}
+nav{display:flex;gap:18px;margin-bottom:32px;font-weight:600}footer{margin-top:48px;font-size:.9rem;color:var(--mut)}</style></head><body><main>
+<nav><a href="index.html">Inicio</a><a href="privacidad.html">Política de privacidad</a><a href="terminos.html">Términos</a></nav><h1>Conexión con TikTok</h1>
+<p id="estado" class="mut">Procesando…</p>
+<p>Esta página recibe la autorización de TikTok para que "Al Rojo Vice Subidas" pueda publicar los vídeos del canal en su propia cuenta. Puedes cerrar esta ventana.</p>
+<p class="mut" id="codigo" style="word-break:break-all"></p>
+<script>
+var q=new URLSearchParams(location.search),c=q.get('code'),e=q.get('error');
+var s=document.getElementById('estado');
+if(c){s.textContent='✅ Cuenta conectada correctamente.';document.getElementById('codigo').textContent='Código de autorización: '+c;}
+else if(e){s.textContent='❌ No se concedió el permiso ('+e+').';}
+else{s.textContent='Abre esta página desde el botón "Conectar con TikTok".';}
+</script>
+<footer>Canal no oficial de fans, sin relación con Rockstar Games ni Take-Two Interactive.</footer></main></body></html>
